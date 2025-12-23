@@ -1,0 +1,41 @@
+:root{
+  --bg-1:#0f1724;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#3b82f6;
+  --glass:rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0f1724 0%, #102a43 100%);color:#0b1220}
+.app{width:min(820px,94%);margin:48px auto;padding:20px}
+.header{text-align:center;margin-bottom:18px}
+.title{font-size:28px;color:var(--card);margin:0 0 6px}
+.subtitle{color:var(--muted);margin:0 0 12px}
+
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));border-radius:14px;padding:14px;color:var(--card);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.search-card{max-width:760px;margin:0 auto 18px}
+.row{display:flex;gap:10px;margin-bottom:10px}
+input[type="text"],input[type="password"]{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--card);outline:none;font-size:15px}
+input::placeholder{color:rgba(255,255,255,0.5)}
+.btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn:hover{filter:brightness(0.95)}
+.note{font-size:13px;color:var(--muted);margin:0}
+
+.current-weather{display:flex;align-items:center;gap:18px;padding:18px;margin-bottom:18px}
+.current-weather img{width:96px;height:96px}
+.current-info h2{margin:0;color:var(--card)}
+.current-info p{margin:6px 0;color:var(--card)}
+.temp{font-size:36px;font-weight:700}
+
+.forecast-title{color:var(--card);margin:6px 0 10px}
+.forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.forecast-card{background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;text-align:center;color:var(--card)}
+.forecast-card img{width:56px;height:56px}
+
+.loader{width:48px;height:48px;border-radius:50%;border:5px solid rgba(255,255,255,0.12);border-top-color:var(--accent);margin:8px auto;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media (max-width:520px){
+  .current-weather{flex-direction:column;align-items:flex-start}
+  .row{flex-direction:column}
+}

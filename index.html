@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <h1 class="title">Weather Forecast</h1>
+            <p class="subtitle">Current weather and 5-day forecast</p>
+        </header>
+
+        <section class="search-card card">
+            <div class="row">
+                
+            </div>
+            <div class="row search-row">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="searchBtn" class="btn">Search</button>
+            </div>
+            <p class="note">Your API key is sent directly to OpenWeatherMap. Keep it private.</p>
+        </section>
+
+        <section id="currentWeather" class="card current-weather"></section>
+
+        <h2 class="forecast-title">5-Day Forecast</h2>
+        <div id="forecast" class="forecast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
